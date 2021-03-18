@@ -1,4 +1,4 @@
-<!doctype html><html lang="pl"><head><meta charset="UTF-8"><title>Pierwszy komponent w React.js</title><script src="https://unpkg.com/react/umd/react.development.js"></script><script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script><script src="https://unpkg.com/babel-standalone/babel.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"><style></style></head><body><div id="app"></div><script type="text/babel">const allUsers = ["Aneta", "Daniel", "Maciej", "Kamil"]
+<!doctype html><html lang="pl"><head><meta charset="UTF-8"><title>Pierwszy komponent w React.js</title><script src="https://unpkg.com/react/umd/react.development.js"></script><script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script><script src="https://unpkg.com/babel-standalone/babel.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"><style>.ui.menu .item img.logo{margin-right:1.5em}.containerw{margin-top:5em}ul.ui.list li:before{display:none;content:''}p{background-color:#0ff}</style></head><body><div id="app"></div><script type="text/babel">const allUsers = ["Aneta", "Daniel", "Maciej", "Kamil"]
 
   class App extends React.Component {
     constructor() {
@@ -19,19 +19,14 @@
 
     }
 
-    getFilteredUsersForText(text) {
-      return new Promise(resolve => {
-        const time = (Math.random() + 1) * 250;
-        setTimeout(() => {
-          const filteredUsers = allUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()));
-          resolve(filteredUsers);
-        }, time) ;
-      });
+    getFilteredUsersForText(text){
+      return allUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()))
     }
 
     render() {
       return (
               <div>
+                <p>Write something from the list to change then</p>
                 <input onInput={this.filterList.bind(this)}/>
                 <UserList users= {this.state.filteredUsers} />              </div>
       );
