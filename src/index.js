@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as React from 'react';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class ContactItem extends React.Component{
+render(){
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const {name= "d", department= "dd"} = this.props
+    return(
+        <li className="item">
+            <img src="https://png.pngtree.com/png-vector/20191018/ourlarge/pngtree-cute-llama-avatar-with-a-yellow-background-png-image_1770354.jpg" className="ui mini rounded image"/>
+            <div className="content">
+                <h4 className="header">{name}</h4>
+                <div className="description">{department}</div>
+            </div>
+        </li>
+    )
+}
+
+}
+

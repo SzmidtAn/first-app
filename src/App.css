@@ -1,6 +1,22 @@
 .App {
   text-align: center;
 }
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}
+
+.containerw  {
+  margin-top: 5em;
+}
+
+ul.ui.list li:before {
+  display: none;
+  content: '';
+}
+p{
+  background-color: aqua;
+}
+
 
 .App-logo {
   height: 40vmin;
