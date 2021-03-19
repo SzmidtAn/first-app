@@ -1,93 +1,22 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pierwszy komponent w React.js</title>
-  <script src="https://unpkg.com/react/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/babel-standalone/babel.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
 
-  <style>
-
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet" href="../src/product.css">
 
 
-
-
-  </style>
-
+  <title>Repfp</title>
 </head>
-
-
-
 <body>
+<noscript>
+  You need to enable JavaScript to run this app.
+</noscript>
+<div id="root"></div>
 
-<div id="app"></div>
-
-
-<script type="text/babel">
-
-  const allUsers = ["Aneta", "Daniel", "Maciej", "Kamil"]
-
-  class App extends React.Component {
-    constructor() {
-      super();
-
-      this.state = {
-        filteredUsers: allUsers
-      };
-    }
-
-
-    filterList(e){
-      const text = e.currentTarget.value;
-      const filteredUsers = this.getFilteredUsersForText(text)
-      this.setState({
-        filteredUsers
-      })
-
-    }
-
-    getFilteredUsersForText(text) {
-      return new Promise(resolve => {
-        const time = (Math.random() + 1) * 250;
-        setTimeout(() => {
-          const filteredUsers = allUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()));
-          resolve(filteredUsers);
-        }, time) ;
-      });
-    }
-
-    render() {
-      return (
-              <div>
-                <input onInput={this.filterList.bind(this)}/>
-                <UserList users= {this.state.filteredUsers} />              </div>
-      );
-    }
-  }
-
-  const UserList = ({users}) => {
-    if (users.length > 0) {
-
-    return(
-            <ul>
-              {users.map(user => <li key={user}>{user}</li> )}
-            </ul>
-    )
-    }
-
-    return (
-            <p>No results</p>
-    )
-  }
-
-
-  ReactDOM.render(<App />, document.getElementById("app"));
-
-
-</script>
 </body>
-
 </html>

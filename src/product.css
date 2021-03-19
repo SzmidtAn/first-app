@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(225, 224, 224);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+nav {
+    background: lightgray;
+    display: flex;
+    height: 3rem;
+    justify-content: flex-end;
+    box-shadow: 1px 1px 10px gray;
+    flex-wrap: nowrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 30px;
+    flex-wrap: nowrap;
+}
+
+nav a:hover, a:active {
+    background:  rgb(78, 76, 76);
+    color: lightgray;
+}
+
+img {
+    height: 50%;
+    margin: auto auto auto 10px;
+}
+
+#login{
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid;
+    margin: auto 10px auto auto ;
+    padding: 5px 20px 5px 20px;
+
+
+}
+
+.product{
+    background-color: white;
+    max-width: 800px;
+    margin:   100px   ;
+    flex-direction: row;
+
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 20px grey;
+
+
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    flex: 4;
+
+}
+
+h2 {
+}
+
+h4 {
+    margin-top: 0px;
+
+}
+
+p {
+    font-size: small;
+}
+
+.image {
+    background-color: yellow;
+    padding: 30px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: auto;
+
+}
+
+div img {
+    height: 100px;
+
+}
+
+.pris {
+    align-self: flex-end;
+    font-weight: bolder;
+    font-size: x-large;
+
+}
+
+

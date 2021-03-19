@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { AppHeader } from "./AppHeader";
+import {CardComponent} from "./CardComponent";
+import {ProductComponent} from "./ProductComponent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  constructor() {
+      super();
+
+    this.state = {
+    cardVisable: false,
+        productVisable: false
+
+    };
+  }
+
+    onNavClick = (cardVisable) => {
+
+     this.setState(state => ({
+         cardVisable: !state.cardVisable
+     }))
+
+    }
+
+
+  render() {
+
+    return (
+        <div>
+          <AppHeader onNavClick={this.onNavClick} />
+          <main className="ui main text container">
+              {this.state.cardVisable &&
+             <CardComponent />
+              }
+              {!this.state.cardVisable &&
+              <ProductComponent />}
+          </main>
+        </div>
+    );
+  }
 }
-
-export default App;
