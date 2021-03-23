@@ -11,6 +11,8 @@ export class CardComponent extends React.Component {
         return (
 
 
+            <div id="cardView">
+
 
             <article className="card" onClick={this.handleClick}>
                 <aside className="top">&hearts;<span>9</span></aside>
@@ -20,6 +22,7 @@ export class CardComponent extends React.Component {
             </article>
 
 
+            </div>
 
         );
     }

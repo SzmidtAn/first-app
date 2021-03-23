@@ -1,18 +1,14 @@
-
-
 body {
   background-color: rgb(225, 224, 224);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
-
 }
 
 nav {
   background: lightgray;
   display: flex;
   height: 3rem;
-  justify-content: flex-end;
   box-shadow: 1px 1px 10px gray;
   flex-wrap: nowrap;
 }
@@ -32,7 +28,7 @@ nav a:hover, a:active {
 }
 
 #logo {
-  height: 50%;
+  height: 3vh;
   margin: auto auto auto 10px;
 }
 
@@ -42,116 +38,135 @@ nav a:hover, a:active {
   border: 2px solid;
   margin: auto 10px auto auto ;
   padding: 5px 20px 5px 20px;
-
-
+  display: flex;
 }
 
 .product{
   background-color: white;
-  max-width: 800px;
-  margin:   100px   ;
+  width: 70vw;
+  justify-content: center;
+  align-content: center;
   flex-direction: row;
-
-
+  margin: 10vh auto auto auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 1px 1px 20px grey;
-
-
-
 }
 
 .description {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  flex: 4;
-
+  align-items: stretch;
+  flex: 1 50%;
+  min-height: 200px;
 }
 
 h2 {
+margin: 10px 10px 0 10px;
+  font-size: 5vh;
 }
 
 h4 {
-  margin-top: 0px;
-
+margin: 0 10px 10px 10px;
+  font-size: 3.5vh;
+font-weight: 100;
 }
 
 p {
-  font-size: small;
+margin: 10px;
+  font-size: 2.5vh;
 }
 
 .image {
   background-color: yellow;
-  padding: 30px;
-  padding-top: 15%;
-  padding-bottom: 15%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex: 1;
-  margin: auto;
-
+  flex: 1 50%;
+  min-height: 200px;
 }
 
-div img {
-  height: 100px;
+div > img {
+  max-width: 60%;
+  padding: 10%;
+}
 
+@media screen and (max-width: 600px) {
+  div > img {
+    max-width: 80%;
+  }
+
+  #login {
+    visibility: hidden;
+  }
+
+  h2 {
+    margin: 10px 10px 0 10px;
+    font-size: 3vh;
+  }
+
+  h4 {
+    margin: 0 10px 10px 10px;
+    font-size: 2.5vh;
+    font-weight: 100;
+  }
+
+  p {
+    margin: 10px;
+    font-size: 1.8vh;
+  }
 }
 
 .pris {
   align-self: flex-end;
   font-weight: bolder;
   font-size: x-large;
-
+  margin: 20px;
 }
-
-
 
 aside{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: x-large;
-
+  font-size: 4vh;
 }
 
 .card{
-  height: 400px;
-  width: 250px;
+  height: 50vh;
+  width: 30vh;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  border: 10px solid white;
+  border: 1.5vh solid white;
   border-radius: 5%;
   justify-content: space-between;
   align-items: center;
-  font-size: xxx-large;
+  font-size: 8vh;
   color: red;
   box-shadow: 1px 1px 20px grey;
   margin: 100px auto  auto  auto ;
-
 }
 
 .bottom {
   align-self: flex-end;
-  margin: 10px;
+  margin: 1vh;
   transform: rotate(180deg);
 }
 
 .top {
   align-self: flex-start;
-  margin: 10px;
+  margin: 1vh;
 }
 
 span {
   color: black;
-  font-size: medium;
+  font-size: 3vh;
 }
 
 .animate{
   transition: background-color;
 }
+
