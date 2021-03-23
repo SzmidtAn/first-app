@@ -43,7 +43,7 @@ nav a:hover, a:active {
 
 .product{
   background-color: white;
-  width: 70vw;
+  width: 60vw;
   justify-content: center;
   align-content: center;
   flex-direction: row;
