@@ -1,6 +1,7 @@
 body {
   background-color: rgb(225, 224, 224);
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr;
   justify-content: space-between;
   flex-direction: column;
 }

@@ -26,15 +26,140 @@ export class App extends React.Component {
   render() {
 
     return (
-        <div>
+        <div className="grid">
+            <div className="appHeader">
           <AppHeader onNavClick={this.onNavClick} />
-          <main className="ui main text container">
-              {this.state.cardVisable &&
-             <CardComponent />
-              }
-              {!this.state.cardVisable &&
-              <ProductComponent />}
-          </main>
+
+            </div>
+
+
+            <div>
+
+                <ProductComponent  />
+            </div>
+         <div>
+
+                <ProductComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+
+            <div>
+
+                <ProductComponent  />
+            </div>
+         <div>
+
+                <ProductComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+
+            <div>
+
+                <ProductComponent  />
+            </div>
+         <div>
+
+                <ProductComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+
+            <div>
+
+                <ProductComponent  />
+            </div>
+         <div>
+
+                <ProductComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+
+            <div>
+
+                <ProductComponent  />
+            </div>
+         <div>
+
+                <ProductComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+            <div>
+
+                <CardComponent  />
+            </div>
+
+
+
+
         </div>
     );
   }
